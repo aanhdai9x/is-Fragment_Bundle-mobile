@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:onClick="AddA"
+        android:id="@+id/buttonAddA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="AddB"
+        android:id="@+id/buttonAddB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add B"
+        app:layout_constraintStart_toEndOf="@+id/buttonAddA"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="AddC"
+        android:id="@+id/buttonAddC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add C"
+        app:layout_constraintStart_toEndOf="@+id/buttonAddB"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="Back"
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="RemoveA"
+        android:id="@+id/buttonRemoveA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Re A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddA"
+        tools:ignore="OnClick,UsingOnClickInXml" />
+
+    <Button
+        android:onClick="RemoveB"
+        android:id="@+id/buttonRemoveB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Re B"
+        app:layout_constraintStart_toEndOf="@+id/buttonRemoveA"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddB"
+        tools:ignore="OnClick,UsingOnClickInXml" />
+
+    <Button
+        android:onClick="RemoveC"
+        android:id="@+id/buttonRemoveC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Re C"
+        app:layout_constraintStart_toEndOf="@+id/buttonRemoveB"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddC"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:onClick="PopA"
+        android:id="@+id/buttonPop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pop A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBack"
+        tools:ignore="OnClick" />
+
+    <FrameLayout
+        android:id="@+id/frameContent"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRemoveA"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
